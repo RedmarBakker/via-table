@@ -26,6 +26,20 @@ trait TableTrait
     public $eloquentTableColumns = array();
 
     /*
+    * Stores the actions in the table
+    *
+    * @var array
+    */
+    public $eloquentTableActions = array();
+
+    /*
+    * Prefix for table actions
+    *
+    * @var array
+    */
+    public $routePrefix = '';
+
+    /*
      * Stores the columns to hide when using
      * responsive templates
      *
@@ -93,6 +107,34 @@ trait TableTrait
     public function columns(array $columns = array())
     {
         $this->eloquentTableColumns = $columns;
+
+        return $this;
+    }
+
+    /**
+     * Assigns actions in the table.
+     *
+     * @param array $actions
+     *
+     * @return $this
+     */
+    public function actions(array $actions = array())
+    {
+        $this->eloquentTableActions = $actions;
+
+        return $this;
+    }
+
+    /**
+     * Store route prefix for actions routes.
+     *
+     * @param string $routePrefix
+     *
+     * @return $this
+     */
+    public function routePrefix(string $routePrefix)
+    {
+        $this->routePrefix = $routePrefix;
 
         return $this;
     }
@@ -170,6 +212,7 @@ trait TableTrait
 
         return View::make($view, [
             'collection' => $this,
+            'routePrefix' => $this->routePrefix
         ])->render();
     }
 
