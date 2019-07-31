@@ -44,7 +44,7 @@ trait TableTrait
      *
      * @var boolean
      * */
-    public $hasSelectBoxes = false;
+    public $hasCheckBoxes = false;
 
     /*
      * Stores the columns to hide when using
@@ -139,7 +139,7 @@ trait TableTrait
      */
     public function hasCheckBoxes()
     {
-        $this->hasSelectBoxes = true;
+        $this->hasCheckBoxes = true;
 
         return $this;
     }
