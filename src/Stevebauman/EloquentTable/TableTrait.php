@@ -38,6 +38,13 @@ trait TableTrait
     * @var array
     */
     public $routePrefix = '';
+    
+     /**
+     * Has Checkboxes in every row
+     *
+     * @var boolean
+     * */
+    public $hasSelectBoxes = false;
 
     /*
      * Stores the columns to hide when using
@@ -121,6 +128,18 @@ trait TableTrait
     public function actions(array $actions = array())
     {
         $this->eloquentTableActions = $actions;
+
+        return $this;
+    }
+    
+    /**
+     * Enable checkboxes on every row
+     *
+     * @return $this
+     */
+    public function hasCheckBoxes()
+    {
+        $this->hasSelectBoxes = true;
 
         return $this;
     }
