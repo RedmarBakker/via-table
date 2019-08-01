@@ -26,25 +26,32 @@ trait TableTrait
     public $eloquentTableColumns = array();
 
     /*
-    * Stores the actions in the table
-    *
-    * @var array
-    */
+     * Stores the actions in the table
+     *
+     * @var array
+     */
     public $eloquentTableActions = array();
 
-    /*
-    * Prefix for table actions
-    *
-    * @var array
-    */
+    /**
+     * Prefix for table actions
+     *
+     * @var array
+     * */
     public $routePrefix = '';
     
-     /**
+    /**
      * Has Checkboxes in every row
      *
      * @var boolean
      * */
     public $hasCheckBoxes = false;
+    
+    /**
+     * Language
+     *
+     * @var string
+     * */
+    public $localeDomain = '';
 
     /*
      * Stores the columns to hide when using
@@ -154,6 +161,20 @@ trait TableTrait
     public function routePrefix(string $routePrefix)
     {
         $this->routePrefix = $routePrefix;
+
+        return $this;
+    }
+    
+    /**
+     * Define the locale domain where should be worked with
+     *
+     * @param string $localeDomain
+     *
+     * @return $this
+     * */
+    public function setLocaleDomain(string $localeDomain)
+    {
+        $this->localeDomain = $localeDomain;
 
         return $this;
     }
