@@ -40,11 +40,11 @@ trait TableTrait
     public $routePrefix = '';
     
     /**
-     * Has Checkboxes in every row
+     * Selection Buttons
      *
-     * @var boolean
+     * @var array
      * */
-    public $hasCheckBoxes = false;
+    public $selectionButtons = [];
     
     /**
      * Language
@@ -140,13 +140,13 @@ trait TableTrait
     }
     
     /**
-     * Enable checkboxes on every row
+     * Set buttons for selection
      *
      * @return $this
      */
-    public function hasCheckBoxes()
+    public function selectionButtons(array $buttons = array())
     {
-        $this->hasCheckBoxes = true;
+        $this->selectionButtons = $buttons;
 
         return $this;
     }
