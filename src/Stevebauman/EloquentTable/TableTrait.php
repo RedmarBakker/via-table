@@ -33,18 +33,18 @@ trait TableTrait
     public $eloquentTableActions = array();
 
     /**
+     * Stores the selection actions in the table
+     *
+     * @var array
+     * */
+    public $eloquentTableSelectionActions = array();
+    
+    /**
      * Prefix for table actions
      *
      * @var array
      * */
     public $routePrefix = '';
-    
-    /**
-     * Selection Buttons
-     *
-     * @var array
-     * */
-    public $selectionButtons = [];
     
     /**
      * Language
@@ -132,7 +132,7 @@ trait TableTrait
      *
      * @return $this
      */
-    public function actions(array $actions = array())
+    public function setActions(array $actions = array())
     {
         $this->eloquentTableActions = $actions;
 
@@ -142,11 +142,13 @@ trait TableTrait
     /**
      * Set buttons for selection
      *
+     * @param array $actions
+     *
      * @return $this
      */
-    public function selectionButtons(array $buttons = array())
+    public function setSelectionActions(array $actions = array())
     {
-        $this->selectionButtons = $buttons;
+        $this->eloquentTableSelectionActions = $actions;
 
         return $this;
     }
@@ -158,7 +160,7 @@ trait TableTrait
      *
      * @return $this
      */
-    public function routePrefix(string $routePrefix)
+    public function setRoutePrefix(string $routePrefix)
     {
         $this->routePrefix = $routePrefix;
 
