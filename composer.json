@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Stevebauman\\EloquentTable\\": "src/Stevebauman/EloquentTable/"
+            "RedmarBakker\\ViaTable\\": "src/ViaTable/"
         }
     },
     "minimum-stability": "stable"
