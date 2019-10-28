@@ -2,7 +2,7 @@
 
 namespace Stevebauman\Tables;
 
-use Stevebauman\EloquentTable\TableCollection;
+use RedmarBakker\ViaTable\TableCollection;
 
 interface TableInterface
 {

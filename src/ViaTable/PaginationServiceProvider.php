@@ -1,6 +1,6 @@
 <?php
 
-namespace Stevebauman\EloquentTable;
+namespace RedmarBakker\ViaTable;
 
 use Illuminate\Pagination\PaginationServiceProvider as LaravelPaginationServiceProvider;
 

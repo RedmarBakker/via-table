@@ -1,6 +1,6 @@
 <?php
 
-use Stevebauman\EloquentTable\EloquentTableServiceProvider;
+use RedmarBakker\ViaTable\EloquentTableServiceProvider;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Config;

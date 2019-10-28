@@ -4,7 +4,7 @@ namespace SteveBauman\Tables;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Input;
-use Stevebauman\EloquentTable\TableCollection;
+use RedmarBakker\ViaTable\TableCollection;
 
 abstract class AbstractTable implements TableInterface
 {

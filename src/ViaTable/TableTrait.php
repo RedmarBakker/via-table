@@ -1,6 +1,6 @@
 <?php
 
-namespace Stevebauman\EloquentTable;
+namespace RedmarBakker\ViaTable;
 
 use Closure;
 use Illuminate\Support\Facades\View;
