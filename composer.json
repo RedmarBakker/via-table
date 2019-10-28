@@ -1,5 +1,5 @@
 {
-    "name": "stevebauman/eloquenttable",
+    "name": "redmarbakker/via-table",
     "description": "An HTML table generator for laravel collections",
     "license" : "MIT",
     "keywords" : [
