@@ -1,6 +1,6 @@
 <?php
 
-namespace Stevebauman\Tables;
+namespace RedmarBakker\ViaTable\Tables;
 
 use RedmarBakker\ViaTable\TableCollection;
 

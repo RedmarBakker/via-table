@@ -1,6 +1,6 @@
 <?php
 
-namespace SteveBauman\Tables;
+namespace RedmarBakker\ViaTable\Tables;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Input;
